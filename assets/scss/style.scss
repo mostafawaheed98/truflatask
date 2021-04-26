@@ -1,7 +1,184 @@
-//Set the main color of the project
+/*Start of setting main variables*/
 $mainColor: #db8939;
+$secondColor: #42415B;
+$mainFont: 'Roboto', sans-serif;
+$secondFont: 'Open Sans', sans-serif;
+/*End of setting main variables*/
 
-//Test the main color
-h1{
-    color: $mainColor;
+/*Start of general styling*/
+*{
+    transition: all 0.25s ease-in-out;
 }
+body{
+    font-family: $mainFont;
+    padding: 80px 0px 160px 0px;
+    button.btn{
+        background-color: $mainColor;
+        color: #fff;
+        padding: 14px 29px 16px 29px;
+        border: 0px;
+        font-family: $mainFont !important;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+    h1, h2, h3, h4, h5, h6{
+        font-weight: 700;
+        color: $secondColor;
+    }
+    p{
+        color: $secondColor;
+    }
+}
+/*End of general styling*/
+
+/*Start of navbar*/
+nav.navbar.navbar-light{
+    height: 80px;
+    background-color: #fff !important;
+    ul.navbar-nav{
+        li.nav-item{
+            a.nav-link{
+                color: $secondColor;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 600;
+                padding: 8px 0px;
+                padding-right: 38px;
+                &:hover{
+                    color: $mainColor;
+                }
+            }
+        }
+    }
+} 
+/*End of navbar*/
+
+/*Start of header*/
+header{
+    height: 650px;
+    background-image: url("../images/header-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    border-top: 50px solid #9CA2C6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1{
+        font-size: 66px;
+        margin-bottom: 30px;
+        color: #fff;
+    }
+    p{
+        font-size: 18px;
+        line-height: 30px;
+        letter-spacing: 0px;
+        font-weight: 100;
+        color: #fff;
+    }
+    button{
+        padding: 18px 44px !important;
+        font-size: 18px !important;
+        margin-top: 50px;
+        font-weight: 500;
+    }
+}
+/*End of header*/
+
+/*Start of our team section*/
+section.our-team{
+    padding: 65px 0px 35px 0px;
+    background-color: #F3F3FF;
+    h2{
+        font-size: 50px;
+        line-height: 60px;
+        margin-bottom: 75px;
+    }
+    div.card{
+        border: 0px;
+        margin-bottom: 30px;
+        .card-img{
+            background-color: #C8C7E3;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img{
+                width: 194px;
+                height: 194px;
+                align-self: flex-end;
+            }
+        }
+        .card-body{
+            color: $secondColor;
+            h5{
+                font-size: 20px;
+                line-height: 21px;
+            }
+            p{
+                font-size: 20px;
+                line-height: 26px;
+            }
+            a{
+                display: block;
+                color: $mainColor;
+                text-transform: uppercase;
+                text-decoration-line: none;
+                font-weight: 700;
+                font-size: 20px;
+                margin-bottom: 10px;
+                &:hover{
+                    color: $secondColor;
+                }
+                &:last-of-type{
+                    text-transform: none;   
+                }
+            }
+        }
+    }
+}
+/*End of our team section*/
+
+/*Start of About Us Section*/
+section.about-us{
+    padding: 60px 0px;
+    article{
+        h3{
+            font-size: 30px;
+            line-height: 35px;
+            margin-bottom: 25px;
+        }
+        p{
+            font-family: $secondFont;
+            font-size: 18px;
+            line-height: 30px;
+            letter-spacing: 0;
+            margin-bottom: 50px;
+        }
+        ul.fa-ul{
+            margin-left: 1.5em !important;
+            li{
+                .fa-li{
+                    color: #6F759D;
+                }
+                margin-bottom: 14px;
+                font-size: 18px;
+                font-weight: 700;
+                color: $secondColor;
+            }
+            
+        }
+        &:first-of-type{
+            h3{
+                line-height: 48px;
+                font-size: 38px;
+            }
+            p{
+                font-size: 20px;
+                line-height: 34px;
+            }
+        }
+    }
+}
+/*End of About Us Section*/

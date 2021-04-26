@@ -1,5 +1,174 @@
-h1 {
+/*Start of setting main variables*/
+/*End of setting main variables*/
+/*Start of general styling*/
+* {
+  transition: all 0.25s ease-in-out;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  padding: 80px 0px 160px 0px;
+}
+body button.btn {
+  background-color: #db8939;
+  color: #fff;
+  padding: 14px 29px 16px 29px;
+  border: 0px;
+  font-family: "Roboto", sans-serif !important;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+body h1, body h2, body h3, body h4, body h5, body h6 {
+  font-weight: 700;
+  color: #42415B;
+}
+body p {
+  color: #42415B;
+}
+
+/*End of general styling*/
+/*Start of navbar*/
+nav.navbar.navbar-light {
+  height: 80px;
+  background-color: #fff !important;
+}
+nav.navbar.navbar-light ul.navbar-nav li.nav-item a.nav-link {
+  color: #42415B;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px 0px;
+  padding-right: 38px;
+}
+nav.navbar.navbar-light ul.navbar-nav li.nav-item a.nav-link:hover {
   color: #db8939;
 }
+
+/*End of navbar*/
+/*Start of header*/
+header {
+  height: 650px;
+  background-image: url("../images/header-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-top: 50px solid #9CA2C6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header h1 {
+  font-size: 66px;
+  margin-bottom: 30px;
+  color: #fff;
+}
+header p {
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0px;
+  font-weight: 100;
+  color: #fff;
+}
+header button {
+  padding: 18px 44px !important;
+  font-size: 18px !important;
+  margin-top: 50px;
+  font-weight: 500;
+}
+
+/*End of header*/
+/*Start of our team section*/
+section.our-team {
+  padding: 65px 0px 35px 0px;
+  background-color: #F3F3FF;
+}
+section.our-team h2 {
+  font-size: 50px;
+  line-height: 60px;
+  margin-bottom: 75px;
+}
+section.our-team div.card {
+  border: 0px;
+  margin-bottom: 30px;
+}
+section.our-team div.card .card-img {
+  background-color: #C8C7E3;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+section.our-team div.card .card-img img {
+  width: 194px;
+  height: 194px;
+  align-self: flex-end;
+}
+section.our-team div.card .card-body {
+  color: #42415B;
+}
+section.our-team div.card .card-body h5 {
+  font-size: 20px;
+  line-height: 21px;
+}
+section.our-team div.card .card-body p {
+  font-size: 20px;
+  line-height: 26px;
+}
+section.our-team div.card .card-body a {
+  display: block;
+  color: #db8939;
+  text-transform: uppercase;
+  text-decoration-line: none;
+  font-weight: 700;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+section.our-team div.card .card-body a:hover {
+  color: #42415B;
+}
+section.our-team div.card .card-body a:last-of-type {
+  text-transform: none;
+}
+
+/*End of our team section*/
+/*Start of About Us Section*/
+section.about-us {
+  padding: 60px 0px;
+}
+section.about-us article h3 {
+  font-size: 30px;
+  line-height: 35px;
+  margin-bottom: 25px;
+}
+section.about-us article p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+  letter-spacing: 0;
+  margin-bottom: 50px;
+}
+section.about-us article ul.fa-ul {
+  margin-left: 1.5em !important;
+}
+section.about-us article ul.fa-ul li {
+  margin-bottom: 14px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #42415B;
+}
+section.about-us article ul.fa-ul li .fa-li {
+  color: #6F759D;
+}
+section.about-us article:first-of-type h3 {
+  line-height: 48px;
+  font-size: 38px;
+}
+section.about-us article:first-of-type p {
+  font-size: 20px;
+  line-height: 34px;
+}
+
+/*End of About Us Section*/
 
 /*# sourceMappingURL=style.css.map */
