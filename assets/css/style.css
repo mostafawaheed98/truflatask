@@ -1,5 +1,7 @@
-/*Start of setting main variables*/
-/*End of setting main variables*/
+/*Start of variables*/
+/*End of variables*/
+/*Start of mixins*/
+/*End of mixins*/
 /*Start of general styling*/
 * {
   transition: all 0.25s ease-in-out;
@@ -7,7 +9,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  padding: 80px 0px 160px 0px;
+  padding: 80px 0px 80px 0px;
 }
 body button.btn {
   background-color: #db8939;
@@ -44,7 +46,35 @@ nav.navbar.navbar-light ul.navbar-nav li.nav-item a.nav-link {
 nav.navbar.navbar-light ul.navbar-nav li.nav-item a.nav-link:hover {
   color: #db8939;
 }
+nav.navbar.navbar-light ul.navbar-nav li.nav-item:last-of-type {
+  display: none;
+}
+nav.navbar.navbar-light button:last-of-type {
+  display: none;
+}
 
+@media (max-width: 991px) {
+  nav.navbar.navbar-light ul.navbar-nav li.nav-item {
+    display: none;
+  }
+  nav.navbar.navbar-light ul.navbar-nav li.nav-item:nth-of-type(3) {
+    display: block;
+  }
+}
+@media (max-width: 460px) {
+  nav.navbar.navbar-light ul.navbar-nav li.nav-item:nth-of-type(3) {
+    display: none;
+  }
+  nav.navbar.navbar-light ul.navbar-nav li.nav-item:last-of-type {
+    display: block;
+  }
+  nav.navbar.navbar-light button:first-of-type {
+    display: none;
+  }
+  nav.navbar.navbar-light button:last-of-type {
+    display: block;
+  }
+}
 /*End of navbar*/
 /*Start of header*/
 header {
@@ -52,7 +82,7 @@ header {
   background-image: url("../images/header-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
+  background-position: center center;
   border-top: 50px solid #9CA2C6;
   display: flex;
   align-items: center;
@@ -69,6 +99,7 @@ header p {
   letter-spacing: 0px;
   font-weight: 100;
   color: #fff;
+  width: 80%;
 }
 header button {
   padding: 18px 44px !important;
@@ -77,6 +108,18 @@ header button {
   font-weight: 500;
 }
 
+@media (max-width: 768px) {
+  header {
+    text-align: center;
+  }
+  header h1 {
+    font-size: 38px !important;
+  }
+  header p {
+    font-size: 18px !important;
+    width: 100%;
+  }
+}
 /*End of header*/
 /*Start of our team section*/
 section.our-team {
@@ -87,6 +130,12 @@ section.our-team h2 {
   font-size: 50px;
   line-height: 60px;
   margin-bottom: 75px;
+}
+@media (max-width: 768px) {
+  section.our-team h2 {
+    font-size: 30px !important;
+    margin-bottom: 60px;
+  }
 }
 section.our-team div.card {
   border: 0px;
@@ -141,6 +190,11 @@ section.about-us article h3 {
   line-height: 35px;
   margin-bottom: 25px;
 }
+@media (max-width: 768px) {
+  section.about-us article h3 {
+    font-size: 22px !important;
+  }
+}
 section.about-us article p {
   font-family: "Open Sans", sans-serif;
   font-size: 18px;
@@ -163,6 +217,11 @@ section.about-us article ul.fa-ul li .fa-li {
 section.about-us article:first-of-type h3 {
   line-height: 48px;
   font-size: 38px;
+}
+@media (max-width: 768px) {
+  section.about-us article:first-of-type h3 {
+    font-size: 28px !important;
+  }
 }
 section.about-us article:first-of-type p {
   font-size: 20px;

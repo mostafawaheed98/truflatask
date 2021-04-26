@@ -1,9 +1,21 @@
-/*Start of setting main variables*/
+/*Start of variables*/
 $mainColor: #db8939;
 $secondColor: #42415B;
 $mainFont: 'Roboto', sans-serif;
 $secondFont: 'Open Sans', sans-serif;
-/*End of setting main variables*/
+/*End of variables*/
+
+/*Start of mixins*/
+@mixin in-tablet {
+    @media (max-width: 768px) { @content };
+} 
+@mixin in-small-desktop {
+    @media (max-width: 991px) { @content };
+} 
+@mixin in-medium-mobile {
+    @media (max-width: 460px) { @content };
+} 
+/*End of mixins*/
 
 /*Start of general styling*/
 *{
@@ -11,7 +23,7 @@ $secondFont: 'Open Sans', sans-serif;
 }
 body{
     font-family: $mainFont;
-    padding: 80px 0px 160px 0px;
+    padding: 80px 0px 80px 0px;
     button.btn{
         background-color: $mainColor;
         color: #fff;
@@ -49,9 +61,42 @@ nav.navbar.navbar-light{
                     color: $mainColor;
                 }
             }
+            &:last-of-type{display: none;}
         }
     }
+    button{&:last-of-type{display: none;}}
 } 
+// Handling issues in tablet version
+@include in-small-desktop{
+    nav.navbar.navbar-light{
+        ul.navbar-nav{
+            li.nav-item{
+                display: none;
+                &:nth-of-type(3){
+                    display: block;
+                }
+            }
+        }
+    } 
+}
+@include in-medium-mobile{
+    nav.navbar.navbar-light{
+        ul.navbar-nav{
+            li.nav-item{
+                &:nth-of-type(3){
+                    display: none;
+                }
+                &:last-of-type{
+                    display: block;
+                }
+            }
+        }
+        button{
+            &:first-of-type{display: none;}
+            &:last-of-type{display: block;}
+        }
+    }
+}
 /*End of navbar*/
 
 /*Start of header*/
@@ -60,7 +105,7 @@ header{
     background-image: url("../images/header-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
+    background-position: center center;
     border-top: 50px solid #9CA2C6;
     display: flex;
     align-items: center;
@@ -76,12 +121,27 @@ header{
         letter-spacing: 0px;
         font-weight: 100;
         color: #fff;
+        width: 80%;
     }
     button{
         padding: 18px 44px !important;
         font-size: 18px !important;
         margin-top: 50px;
         font-weight: 500;
+    }
+}
+// Handling issues in tablet version
+@include in-tablet{
+    header{
+        text-align: center;
+        h1{
+            font-size: 38px !important;
+        }
+        p{
+            font-size: 18px !important;
+            width: 100%;
+        }
+
     }
 }
 /*End of header*/
@@ -94,6 +154,10 @@ section.our-team{
         font-size: 50px;
         line-height: 60px;
         margin-bottom: 75px;
+        @include in-tablet{
+            font-size: 30px !important;
+            margin-bottom: 60px;
+        }
     }
     div.card{
         border: 0px;
@@ -148,6 +212,9 @@ section.about-us{
             font-size: 30px;
             line-height: 35px;
             margin-bottom: 25px;
+            @include in-tablet{
+                font-size: 22px !important;
+            }
         }
         p{
             font-family: $secondFont;
@@ -173,6 +240,9 @@ section.about-us{
             h3{
                 line-height: 48px;
                 font-size: 38px;
+                @include in-tablet{
+                    font-size: 28px !important;
+                }
             }
             p{
                 font-size: 20px;
