@@ -1,0 +1,25 @@
+{
+  "name": "truflatask",
+  "version": "1.0.0",
+  "description": "Front End Developer Task\r ----------------------------------------------------------------\r This repo is for the first task from Trufla. \r To view the task correctly, you should do the following steps: \r     1. Clone the repo.\r     2. Run \"npm install\" command to install all dependencies.",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mostafawaheed98/truflatask.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mostafawaheed98/truflatask/issues"
+  },
+  "homepage": "https://github.com/mostafawaheed98/truflatask#readme"
+}
